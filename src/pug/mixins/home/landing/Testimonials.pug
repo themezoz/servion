@@ -1,0 +1,43 @@
+append variables
+  -
+    var testimonials= [
+      {
+        image:'shared-hosting.png',
+        text:`"I've been using servion for more than a year and I must say I've never had such reliable service provider to work with. They've helped me out a lot"`,
+        name:'Erich Marks',
+      },
+      {
+        image:'vpn-hosting.png',
+        text:`"I ve been using Servion for hosting many of my wordpress websites and I truly appreciate how affordable it is"`,
+        name:' Emily Hartman',
+      },
+      {
+        image:'cloud-hosting.png',
+        title:`"I've been using servion for more than a year and I must say I've never had such reliable service provider to work with. They've helped me out a lot"`,
+        name:'Erich Marks',
+      },
+      {
+        image:'wp-hosting.png',
+        text:`"I ve been using Servion for hosting many of my wordpress websites and I truly appreciate how affordable it is"`,
+        name:'Emily Hartman',
+      },
+
+    ];
+
+mixin Items(config)
+  .col-md-4.mb-3.mb-md-0
+    .card.h-100.py-3
+      .card-body.my-2
+        .d-flex.align-items-center
+          img(src=`${CWD}assets/img/gallery/${config.image}` width="70" alt='').img-fluid.me-3.me-md-2.me-lg-3
+          .flex-1.align-items-center
+            h6.mb-0.fs--1.text-1000.fw-medium=config.name 
+            p.fs--2.fw-normal.text-info.mb-0=config.designation
+        p.card-text.ps-7.ps-md-0.ps-xl-7.pt-md-4.pt-lg-3.pt-xl-0=config.text
+
+mixin Testimonials
+  .row
+    .col-lg-6.col-xxl-5.text-center.mx-auto.mb-5
+      h2 Valued customers with valuable feedback
+      p.mb-5 Feedbacks from our happy users. Become one of them. 
+  .row
