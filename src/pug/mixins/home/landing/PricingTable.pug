@@ -42,15 +42,14 @@ mixin Pricing(config)
           ul.list-unstyled
             li=config.item1
             li=config.item2
-      .card-footer.bg-white.text-center
+      .border-top.bg-white.text-center.pt-3.pb-0
         p.mb-0 Get started at 
         .d-flex.justify-content-center
           h3.fw-normal=config.price
           span.d-flex.align-items-center /month
 
-
 mixin PricingTable 
-  +Section
+  +Section.pt-6
     .row
       .col-lg-6.col-xxl-5.text-center.mx-auto.mb-5
         h2 Types of hosting that we provide
