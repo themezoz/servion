@@ -1,5 +1,5 @@
 extends Layout
-include ../mixins/navbars/NavbarSpace
+include ../mixins/navbars/NavbarServion
 include ../mixins/Variables
 
 prepend scripts
@@ -11,7 +11,7 @@ append footerStyles
   link(href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet")
 
 block mainContent 
-  +NavbarSpace
+  +NavbarServion
   block wrapperContent 
     block beforeContent
     block content

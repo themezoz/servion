@@ -18230,6 +18230,10 @@ ul {
   box-shadow: 0 10px 20px #D42DA3, 0 6px 6px #A1B0FC;
 }
 
+.btn-light {
+  color: #424D83;
+}
+
 /* Hover */
 .hover-top {
   -webkit-transform: translateY(0) translateZ(0);
@@ -18371,19 +18375,19 @@ ul {
 
 @media (min-width: 576px) {
   .carousel-control-prev {
-    left: -35px;
+    left: -25px;
   }
   .carousel-control-next {
-    right: -35px;
+    right: -25px;
   }
 }
 
 @media (min-width: 768px) {
   .carousel-control-prev {
-    left: -50px;
+    left: -30px;
   }
   .carousel-control-next {
-    right: -50px;
+    right: -30px;
   }
 }
 
@@ -18398,19 +18402,10 @@ ul {
 
 @media (min-width: 1200px) {
   .carousel-control-prev {
-    left: -55px;
+    left: -30px;
   }
   .carousel-control-next {
-    right: -55px;
-  }
-}
-
-@media (min-width: 1540px) {
-  .carousel-control-prev {
-    left: -70px;
-  }
-  .carousel-control-next {
-    right: -70px;
+    right: -30px;
   }
 }
 

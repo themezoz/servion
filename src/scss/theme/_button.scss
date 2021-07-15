@@ -26,4 +26,6 @@
 .btn-gradient:hover{
   box-shadow: 0 10px 20px $pink, 0 6px 6px $primary;
 }
-
+.btn-light{
+  color: $secondary;
+}

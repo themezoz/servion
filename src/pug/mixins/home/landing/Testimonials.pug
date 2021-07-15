@@ -25,10 +25,10 @@ append variables
     ];
 
 mixin Items(config)
-  .col-md-6.mb-3.mb-md-0
+  .col-lg-6.mb-3.mb-md-0
     .card.card-span.h-100.bg-transparent
       .card-body.my-2
-        .d-flex
+        .d-sm-flex
           img(src=`${CWD}assets/img/gallery/${config.image}` height="100"  alt='...').img-fluid.me-3.me-md-2.me-lg-3
           .flex-1.ps-2
             svg.bi.bi-star-fill(xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#FFCC00' viewBox='0 0 16 16')
@@ -45,7 +45,7 @@ mixin Items(config)
             h6.mb-0.fs--1=config.name 
         
 mixin Testimonials
-  section
+  section.py-8
     +Background({image: `${CWD}assets/img/gallery/testimonial-bg.png`, attrs: { style: { 'background-position': 'center', 'background-size': 'cover',} }, className: '' })
     .container
       .row

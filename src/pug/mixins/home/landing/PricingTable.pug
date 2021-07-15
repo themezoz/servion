@@ -33,8 +33,8 @@ append variables
     ];
 
 mixin Pricing(config) 
-  .col-xl-3
-    .card.card-span.shadow.py-4
+  .col-sm-6.col-xl-3.mb-3
+    .card.card-span.shadow.py-4.h-100
       .card-body
         .text-center
           img(src=`${CWD}assets/img/icons/${config.image}` alt='...' )
@@ -54,7 +54,7 @@ mixin PricingTable
       .col-lg-6.col-xxl-5.text-center.mx-auto.mb-5
         h2 Types of hosting that we provide
         p.mb-5 Our service is always affordable for everyone. 
-    .row
+    .row.h-100
       +Pricing(price[0])
       +Pricing(price[1])
       +Pricing(price[2])

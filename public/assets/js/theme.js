@@ -65,8 +65,8 @@ var rgbaColor = function rgbaColor() {
 
 
 var colors = {
-  primary: '#0057FF',
-  secondary: '#748194',
+  primary: '#A1B0FC',
+  secondary: '#424D83',
   success: '#00d27a',
   info: '#27bcfd',
   warning: '#f5803e',
@@ -286,7 +286,7 @@ var navbarInit = function navbarInit() {
     var allColors = _objectSpread(_objectSpread({}, utils.colors), utils.grays);
 
     var name = utils.getData(navbar, DataKey.NAVBAR_ON_SCROLL);
-    var colorName = Object.keys(allColors).includes(name) ? name : 'light';
+    var colorName = Object.keys(allColors).includes(name) ? name : 'secondary';
     var color = allColors[colorName];
     var bgClassName = "bg-".concat(colorName);
     var shadowName = 'shadow-transition';
@@ -296,12 +296,11 @@ var navbarInit = function navbarInit() {
         backgroundImage = _window$getComputedSt.backgroundImage;
 
     var transition = 'background-color 0.35s ease';
-    navbar.style.backgroundImage = 'navbar-space'; // Change navbar background color on scroll
+    navbar.style.backgroundImage = 'none'; // Change navbar background color on scroll
 
     window.addEventListener(Events.SCROLL, function () {
       var scrollTop = html.scrollTop;
-      var alpha = scrollTop / windowHeight * 0.5; // console.log(alpha);
-      // Add class on scroll
+      var alpha = scrollTop / windowHeight * 0.5; // Add class on scroll
 
       navbar.classList.add('backdrop');
 
@@ -311,7 +310,7 @@ var navbarInit = function navbarInit() {
 
       alpha >= 1 && (alpha = 1);
       navbar.style.backgroundColor = "rgba(".concat(colorRgb[0], ", ").concat(colorRgb[1], ", ").concat(colorRgb[2], ", ").concat(alpha, ")");
-      navbar.style.backgroundImage = alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? backgroundImage : 'navbar-space';
+      navbar.style.backgroundImage = alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? backgroundImage : 'none';
       alpha > 0 || utils.hasClass(navbarCollapse, 'show') ? navbar.classList.add(shadowName) : navbar.classList.remove(shadowName);
     }); // Toggle bg class on window resize
 
